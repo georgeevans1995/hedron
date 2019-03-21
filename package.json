@@ -19,7 +19,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build",
-    "postinstall": "npm run build"
+    "postinstall": "yarn && npm run build"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
