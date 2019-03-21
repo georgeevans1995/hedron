@@ -10,7 +10,7 @@
     "url": "https://github.com/garetmckinley"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:dist",
+    "build": "npm run clean && npm run build:lib && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist && rm -rf lib",
