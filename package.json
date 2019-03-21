@@ -10,7 +10,7 @@
     "url": "https://github.com/garetmckinley"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:lib && npm run build:dist",
+    "build": "npm run clean && npm run build:dist",
     "build:lib": "babel src --out-dir lib",
     "build:dist": "rollup -c && rollup -c --environment PRODUCTION",
     "clean": "rm -rf dist && rm -rf lib",
@@ -19,7 +19,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build",
-    "postinstall": "yarn && npm run build"
+    "postinstall": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/garetmckinley/hedron/issues"
