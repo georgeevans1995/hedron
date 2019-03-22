@@ -108,6 +108,8 @@ export interface BoundsProps extends Styleable {
    * Alignment of children along the horizontal axis
    */
   halign?: "left" | "center" | "right";
+
+  wrap?: boolean;
   /**
    * Allow for customer props due to ability to add
    * custom breakpoints
