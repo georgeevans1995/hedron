@@ -1188,20 +1188,20 @@ var drawDebug = function drawDebug() {
  */
 var processAlias = function processAlias(alias) {
   switch (alias) {
-    case 'half':
-      return '50%';
+    case "half":
+      return "50%";
       break;
-    case 'quarter':
-      return '25%';
+    case "quarter":
+      return "25%";
       break;
-    case 'third':
-      return '33.3333333%';
+    case "third":
+      return "33.3333333%";
       break;
-    case 'twoThirds':
-      return '66.666666%';
+    case "twoThirds":
+      return "66.666666%";
       break;
-    case 'threeQuarters':
-      return '75%';
+    case "threeQuarters":
+      return "75%";
       break;
     default:
       return alias;
@@ -1299,10 +1299,10 @@ var flex = function flex(_ref) {
       wrap = _ref.wrap,
       valign = _ref.valign,
       halign = _ref.halign,
-      shiftLeft = _ref.shiftLeft,
-      shiftRight = _ref.shiftRight,
-      shiftUp = _ref.shiftUp,
-      shiftDown = _ref.shiftDown;
+      shiftleft = _ref.shiftleft,
+      shiftright = _ref.shiftright,
+      shiftup = _ref.shiftup,
+      shiftdown = _ref.shiftdown;
 
   var props = [];
   if (flex) props.push("flex: " + flex + ";");
@@ -1318,10 +1318,10 @@ var flex = function flex(_ref) {
     if (direction === "horizontal") props.push("align-items: " + translations.align[valign] + ";");else props.push("justify-content: " + translations.align[valign] + ";");
   }
 
-  if (shiftLeft) props.push("margin-right: auto;");
-  if (shiftRight) props.push("margin-left: auto;");
-  if (shiftUp) props.push("margin-bottom: auto;");
-  if (shiftDown) props.push("margin-top: auto;");
+  if (shiftleft) props.push("margin-right: auto;");
+  if (shiftright) props.push("margin-left: auto;");
+  if (shiftup) props.push("margin-bottom: auto;");
+  if (shiftdown) props.push("margin-top: auto;");
 
   return props;
 };
@@ -1556,10 +1556,10 @@ Box.propTypes = _extends({
   flex: propTypes.bool,
   fill: propTypes.bool,
   fluid: propTypes.bool,
-  shiftRight: propTypes.bool,
-  shiftLeft: propTypes.bool,
-  shiftUp: propTypes.bool,
-  shiftDown: propTypes.bool
+  hiftRight: propTypes.bool,
+  shiftleft: propTypes.bool,
+  shiftup: propTypes.bool,
+  shiftdown: propTypes.bool
 }, Base.propTypes);
 
 Box.defaultProps = _extends({

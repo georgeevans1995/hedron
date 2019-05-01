@@ -19,7 +19,7 @@ Box.propTypes = {
   flex: PropTypes.bool,
   fill: PropTypes.bool,
   fluid: PropTypes.bool,
-  shiftright: PropTypes.bool,
+  hiftRight: PropTypes.bool,
   shiftleft: PropTypes.bool,
   shiftup: PropTypes.bool,
   shiftdown: PropTypes.bool,
