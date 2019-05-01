@@ -11,27 +11,27 @@ export const drawDebug = () => [
  * string with if alias is not passed
  * @param {string} alias
  */
-const processAlias = (alias) => {
-  switch(alias) {
-    case 'half':
-      return '50%'
+const processAlias = alias => {
+  switch (alias) {
+    case "half":
+      return "50%";
       break;
-    case 'quarter':
-      return '25%'
+    case "quarter":
+      return "25%";
       break;
-    case 'third':
-      return '33.3333333%'
+    case "third":
+      return "33.3333333%";
       break;
-    case 'twoThirds':
-      return '66.666666%'
+    case "twoThirds":
+      return "66.666666%";
       break;
-    case 'threeQuarters':
-      return '75%'
+    case "threeQuarters":
+      return "75%";
       break;
     default:
-      return alias
+      return alias;
   }
-}
+};
 
 /**
  * Returns an array of valid css declarations generated
@@ -152,10 +152,10 @@ export const flex = ({
   wrap,
   valign,
   halign,
-  shiftLeft,
-  shiftRight,
-  shiftUp,
-  shiftDown,
+  shiftleft,
+  shiftright,
+  shiftup,
+  shiftdown,
 }) => {
   const props = [];
   if (flex) props.push(`flex: ${flex};`);
@@ -176,13 +176,19 @@ export const flex = ({
     else props.push(`justify-content: ${translations.align[valign]};`);
   }
 
-  if (shiftLeft) props.push("margin-right: auto;");
-  if (shiftRight) props.push("margin-left: auto;");
-  if (shiftUp) props.push("margin-bottom: auto;");
-  if (shiftDown) props.push("margin-top: auto;");
+  if (shiftleft) props.push("margin-right: auto;");
+  if (shiftright) props.push("margin-left: auto;");
+  if (shiftup) props.push("margin-bottom: auto;");
+  if (shiftdown) props.push("margin-top: auto;");
 
   return props;
 };
 
 // eslint-disable-next-line max-len
-export const stripBoolean = (Element) => ({ debug, fluid, fill, wrap, ...props }) => <Element {...props} />
+export const stripBoolean = Element => ({
+  debug,
+  fluid,
+  fill,
+  wrap,
+  ...props
+}) => <Element {...props} />;

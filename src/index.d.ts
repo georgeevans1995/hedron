@@ -140,19 +140,19 @@ export interface BoxProps extends Styleable {
   /**
    * Shifts the box to the right of the parent Bounds
    */
-  shiftRight?: boolean;
+  shiftright?: boolean;
   /**
    * Shifts the box to the left of the parent Bounds
    */
-  shiftLeft?: boolean;
+  shiftleft?: boolean;
   /**
    * Shifts the box to the top of the parent Bounds
    */
-  shiftUp?: boolean;
+  shiftup?: boolean;
   /**
    * Shifts the box to the bottom of the parent Bounds
    */
-  shiftDown?: boolean;
+  shiftdown?: boolean;
   /**
    *  Allow for customer props due to ability to add
    * custom breakpoints
