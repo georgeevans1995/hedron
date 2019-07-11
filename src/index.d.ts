@@ -109,7 +109,7 @@ export interface BoundsProps extends Styleable {
    */
   halign?: "left" | "center" | "right";
 
-  wrap?: boolean;
+  allowWrap?: boolean;
   /**
    * Allow for customer props due to ability to add
    * custom breakpoints
