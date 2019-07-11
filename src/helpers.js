@@ -129,7 +129,7 @@ const translations = {
     horizontal: "row",
     vertical: "column",
   },
-  wrap: {
+  allowWrap: {
     true: "wrap",
     1: "wrap",
     false: "nowrap",
@@ -149,7 +149,7 @@ export const flex = ({
   flex,
   fill,
   direction,
-  wrap,
+  allowWrap,
   valign,
   halign,
   shiftleft,
@@ -162,7 +162,7 @@ export const flex = ({
   if (fill) props.push(`flex: 1 1 auto;`);
   if (direction)
     props.push(`flex-direction: ${translations.direction[direction]};`);
-  if (wrap) props.push(`flex-wrap: ${translations.wrap[wrap]};`);
+  if (allowWrap) props.push(`flex-wrap: ${translations.allowWrap[allowWrap]};`);
 
   if (halign) {
     if (direction === "horizontal")
@@ -189,6 +189,6 @@ export const stripBoolean = Element => ({
   debug,
   fluid,
   fill,
-  wrap,
+  allowWrap,
   ...props
 }) => <Element {...props} />;

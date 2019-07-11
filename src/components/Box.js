@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { flex, drawDebug, breakpoints } from "../helpers";
 import { withBreakpoints } from "./Provider";
@@ -19,7 +19,7 @@ Box.propTypes = {
   flex: PropTypes.bool,
   fill: PropTypes.bool,
   fluid: PropTypes.bool,
-  hiftRight: PropTypes.bool,
+  shiftright: PropTypes.bool,
   shiftleft: PropTypes.bool,
   shiftup: PropTypes.bool,
   shiftdown: PropTypes.bool,

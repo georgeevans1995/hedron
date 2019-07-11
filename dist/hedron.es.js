@@ -1556,7 +1556,7 @@ Box.propTypes = _extends({
   flex: propTypes.bool,
   fill: propTypes.bool,
   fluid: propTypes.bool,
-  hiftRight: propTypes.bool,
+  shiftright: propTypes.bool,
   shiftleft: propTypes.bool,
   shiftup: propTypes.bool,
   shiftdown: propTypes.bool
