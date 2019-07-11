@@ -1282,7 +1282,7 @@
 	    horizontal: "row",
 	    vertical: "column"
 	  },
-	  wrap: {
+	  allowWrap: {
 	    true: "wrap",
 	    1: "wrap",
 	    false: "nowrap",
@@ -1302,19 +1302,19 @@
 	  var flex = _ref.flex,
 	      fill = _ref.fill,
 	      direction = _ref.direction,
-	      wrap = _ref.wrap,
+	      allowWrap = _ref.allowWrap,
 	      valign = _ref.valign,
 	      halign = _ref.halign,
-	      shiftleft = _ref.shiftleft,
-	      shiftright = _ref.shiftright,
-	      shiftup = _ref.shiftup,
-	      shiftdown = _ref.shiftdown;
+	      shiftLeft = _ref.shiftLeft,
+	      shiftRight = _ref.shiftRight,
+	      shiftUp = _ref.shiftUp,
+	      shiftDown = _ref.shiftDown;
 
 	  var props = [];
 	  if (flex) props.push("flex: " + flex + ";");
 	  if (fill) props.push("flex: 1 1 auto;");
 	  if (direction) props.push("flex-direction: " + translations.direction[direction] + ";");
-	  if (wrap) props.push("flex-wrap: " + translations.wrap[wrap] + ";");
+	  if (allowWrap) props.push("flex-wrap: " + translations.allowWrap[allowWrap] + ";");
 
 	  if (halign) {
 	    if (direction === "horizontal") props.push("justify-content: " + translations.align[halign] + ";");else props.push("align-items: " + translations.align[halign] + ";");
@@ -1324,10 +1324,10 @@
 	    if (direction === "horizontal") props.push("align-items: " + translations.align[valign] + ";");else props.push("justify-content: " + translations.align[valign] + ";");
 	  }
 
-	  if (shiftleft) props.push("margin-right: auto;");
-	  if (shiftright) props.push("margin-left: auto;");
-	  if (shiftup) props.push("margin-bottom: auto;");
-	  if (shiftdown) props.push("margin-top: auto;");
+	  if (shiftLeft) props.push("margin-right: auto;");
+	  if (shiftRight) props.push("margin-left: auto;");
+	  if (shiftUp) props.push("margin-bottom: auto;");
+	  if (shiftDown) props.push("margin-top: auto;");
 
 	  return props;
 	};
@@ -1338,8 +1338,8 @@
 	    var debug = _ref2.debug,
 	        fluid = _ref2.fluid,
 	        fill = _ref2.fill,
-	        wrap = _ref2.wrap,
-	        props = objectWithoutProperties(_ref2, ["debug", "fluid", "fill", "wrap"]);
+	        allowWrap = _ref2.allowWrap,
+	        props = objectWithoutProperties(_ref2, ["debug", "fluid", "fill", "allowWrap"]);
 	    return React__default.createElement(Element, props);
 	  };
 	};
@@ -1522,7 +1522,7 @@
 	   * Whether children should wrap when there's no more room
 	   * on the primary axis.
 	   */
-	  wrap: propTypes.bool,
+	  allowWrap: propTypes.bool,
 
 	  /**
 	   * Alignment of children along the vertical axis
@@ -1538,7 +1538,7 @@
 	Bounds.defaultProps = _extends({
 	  debug: false,
 	  direction: "horizontal",
-	  wrap: false
+	  allowWrap: false
 	}, Base.defaultProps);
 
 	var Bounds$1 = withBreakpoints(Bounds);
@@ -1562,10 +1562,10 @@
 	  flex: propTypes.bool,
 	  fill: propTypes.bool,
 	  fluid: propTypes.bool,
-	  shiftright: propTypes.bool,
-	  shiftleft: propTypes.bool,
-	  shiftup: propTypes.bool,
-	  shiftdown: propTypes.bool
+	  shiftRight: propTypes.bool,
+	  shiftLeft: propTypes.bool,
+	  shiftUp: propTypes.bool,
+	  shiftDown: propTypes.bool
 	}, Base.propTypes);
 
 	Box.defaultProps = _extends({

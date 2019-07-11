@@ -152,10 +152,10 @@ export const flex = ({
   allowWrap,
   valign,
   halign,
-  shiftleft,
-  shiftright,
-  shiftup,
-  shiftdown,
+  shiftLeft,
+  shiftRight,
+  shiftUp,
+  shiftDown,
 }) => {
   const props = [];
   if (flex) props.push(`flex: ${flex};`);
@@ -176,10 +176,10 @@ export const flex = ({
     else props.push(`justify-content: ${translations.align[valign]};`);
   }
 
-  if (shiftleft) props.push("margin-right: auto;");
-  if (shiftright) props.push("margin-left: auto;");
-  if (shiftup) props.push("margin-bottom: auto;");
-  if (shiftdown) props.push("margin-top: auto;");
+  if (shiftLeft) props.push("margin-right: auto;");
+  if (shiftRight) props.push("margin-left: auto;");
+  if (shiftUp) props.push("margin-bottom: auto;");
+  if (shiftDown) props.push("margin-top: auto;");
 
   return props;
 };

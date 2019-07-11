@@ -38,7 +38,7 @@ Bounds.propTypes = {
    * Whether children should wrap when there's no more room
    * on the primary axis.
    */
-  allowwrap: PropTypes.bool,
+  allowWrap: PropTypes.bool,
 
   /**
    * Alignment of children along the vertical axis
@@ -55,7 +55,7 @@ Bounds.propTypes = {
 Bounds.defaultProps = {
   debug: false,
   direction: "horizontal",
-  allowwrap: false,
+  allowWrap: false,
   ...Base.defaultProps,
 };
 
